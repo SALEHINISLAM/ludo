@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Ludo</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Ludo</h1>
+    </header>
+    <main>
+        <section class="court">
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box" id="path-1">1</div>
+            <div class="box" id="path-2">2</div>
+            <div class="box" id="path-3">3</div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-1"></div>
+            <!-- roll-1 button -->
+            <div class="box bx-1">
+                <button id="roll-2" class="roll" onclick="roll(2)">Roll</button>
+            </div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box" id="path-52">52</div>
+            <div class="box bx-going-2" id="guti-2-going-1">2+1</div>
+            <!-- bx-2 stand -->
+            <div class="box bx-2" id="path-4">4</div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2">
+                <!-- roll-2 btn -->
+                <button id="roll-3" class="roll" onclick="roll(3)">Roll</button>
+            </div>
+            <div class="box bx-2"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box" id="path-51">51</div>
+            <div class="box bx-going-2" id="guti-2-going-2">2+2</div>
+            <div class="box" id="path-5">5</div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1">
+                <div class="guti-1" id="guti-10" onclick="guti1(0)"></div>
+            </div>
+            <div class="box bx-1">
+                <div class="guti-1" id="guti-11" onclick="guti1(1)"></div>
+            </div>
+            
+            <div class="box bx-1"></div>
+            <div class="box" id="path-50">50</div>
+            <div class="box bx-going-2" id="guti-2-going-3">2+3</div>
+            <div class="box" id="path-6">6</div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2">
+                <div class="guti-2" id="guti-20" onclick='guti2(0)'></div>
+            </div>
+            <div class="box bx-2">
+                <div class="guti-2" id="guti-21" onclick='guti2(1)'></div>
+            </div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1">
+                <div class="guti-1" id="guti-12" onclick="guti1(2)"></div>
+            </div>
+            <div class="box bx-1">
+                <div class="guti-1" id="guti-13" onclick="guti1(3)"></div>
+            </div>
+            
+            <div class="box bx-1"></div>
+            <div class="box" id="path-49">49</div>
+            <div class="box bx-going-2" id="guti-2-going-4">2+4</div>
+            <div class="box" id="path-7">7</div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2">
+                <div class="guti-2" id="guti-22" onclick='guti2(2)'></div>
+            </div>
+            <div class="box bx-2">
+                <div class="guti-2" id="guti-23" onclick='guti2(3)'></div>
+            </div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box bx-1"></div>
+            <div class="box" id="path-48">48</div>
+            <div class="box bx-going-2" id="guti-2-going-5">2+5</div>
+            <div class="box" id="path-8">8</div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box bx-2"></div>
+            <div class="box" id="path-42">42</div>
+            <!-- bx-1 stand -->
+            <div class="box bx-1" id="path-43">43</div>
+            <div class="box" id="path-44">44</div>
+            <div class="box" id="path-45">45</div>
+            <div class="box" id="path-46">46</div>
+            <div class="box" id="path-47">47</div>
+            <div class="box bx-end"></div>
+            <div class="box bx-end" id="guti-2-going-6">2+6</div>
+            <div class="box bx-end"></div>
+            <div class="box" id="path-9">9</div>
+            <div class="box" id="path-10">10</div>
+            <div class="box" id="path-11">11</div>
+            <div class="box" id="path-12">12</div>
+            <div class="box" id="path-13">13</div>
+            <div class="box" id="path-14">14</div>
+            <div class="box" id="path-41">41</div>
+            <div class="box bx-going-1" id="guti-1-going-1">1+1</div>
+            <div class="box bx-going-1" id="guti-1-going-2">1+2</div>
+            <div class="box bx-going-1" id="guti-1-going-3">1+3</div>
+            <div class="box bx-going-1" id="guti-1-going-4">1+4</div>
+            <div class="box bx-going-1" id="guti-1-going-5">1+5</div>
+            <div class="box bx-end" id="guti-1-going-6">1+6</div>
+            <div class="box bx-end"></div>
+            <div class="box bx-end" id="guti-3-going-6">3+6</div>
+            <div class="box bx-going-4" id="guti-3-going-5">3+5</div>
+            <div class="box bx-going-4" id="guti-3-going-4">3+4</div>
+            <div class="box bx-going-4" id="guti-3-going-3">3+3</div>
+            <div class="box bx-going-4" id="guti-3-going-2">3+2</div>
+            <div class="box bx-going-4" id="guti-3-going-1">3+1</div>
+            <div class="box" id="path-15">15</div>
+            <div class="box" id="path-40">40</div>
+            <div class="box" id="path-39">39</div>
+            <div class="box" id="path-38">38</div>
+            <div class="box" id="path-37">37</div>
+            <div class="box" id="path-36">36</div>
+            <div class="box" id="path-35">35</div>
+            <div class="box bx-end"></div>
+            <div class="box bx-end" id="guti-4-going-6">4+6</div>
+            <div class="box bx-end"></div>
+            <div class="box" id="path-21">21</div>
+            <div class="box" id="path-20">20</div>
+            <div class="box" id="path-19">19</div>
+            <div class="box" id="path-18">18</div>
+            <!-- bx-4 stand -->
+            <div class="box bx-4" id="path-17">17</div>
+            <div class="box" id="path-16">16</div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box" id="path-34">34</div>
+            <div class="box bx-going-3" id="guti-4-going-5">4+5</div>
+            <div class="box" id="path-22">22</div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3">
+                <div class="guti-3" id="guti-40" onclick='guti4(0)'></div>
+            </div>
+            <div class="box bx-3">
+                <div class="guti-3" id="guti-41" onclick='guti4(1)'></div>
+            </div>
+            <div class="box bx-3"></div>
+            <div class="box" id="path-33">33</div>
+            <div class="box bx-going-3" id="guti-4-going-4">4+4</div>
+            <div class="box" id="path-23">23</div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4">
+                <div class="guti-4" id="guti-30" onclick='guti3(0)'></div>
+            </div>
+            <div class="box bx-4">
+                <div class="guti-4" id="guti-31" onclick='guti3(1)'></div>
+            </div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3">
+                <div class="guti-3" id="guti-42" onclick='guti4(2)'></div>
+            </div>
+            <div class="box bx-3">
+                <div class="guti-3" id="guti-43" onclick='guti4(3)'></div>
+            </div>
+            <div class="box bx-3"></div>
+            <div class="box" id="path-32">32</div>
+            <div class="box bx-going-3" id="guti-4-going-3">4+3</div>
+            <div class="box" id="path-24">24</div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4">
+                <div class="guti-4" id="guti-32" onclick='guti3(2)'></div>
+            </div>
+            <div class="box bx-4">
+                <div class="guti-4" id="guti-33" onclick='guti3(3)'></div>
+            </div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box" id="path-31">31</div>
+            <div class="box bx-going-3" id="guti-4-going-2">4+2</div>
+            <div class="box" id="path-25">25</div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-3"></div>
+            <!-- roll-3 btn -->
+            <div class="box bx-3">
+                <button id="roll-1" class="roll" onclick="roll(1)">Roll</button>
+            </div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <!-- bx-3 stand -->
+            <div class="box bx-3" id="path-30">30</div>
+            <div class="box bx-going-3" id="guti-4-going-1">4+1</div>
+            <div class="box" id="path-26">26</div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <!-- roll-4 btn -->
+            <div class="box bx-4">
+                <button id="roll-4" class="roll" onclick="roll(4)">Roll</button>
+            </div>
+            <div class="box bx-4"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box bx-3"></div>
+            <div class="box" id="path-29">29</div>
+            <div class="box" id="path-28">28</div>
+            <div class="box" id="path-27">27</div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            <div class="box bx-4"></div>
+            
+        </section>
+    </main>
+    <footer>
+        <h4>All right reserved by MD. SALEHIN ISLAM</h4>
+    </footer>
+</body>
+<script src="scripts/script.js"></script>
+</html>
+<!-- echo "# ludo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/SALEHINISLAM/ludo.git
+git push -u origin main -->
